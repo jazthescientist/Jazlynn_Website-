@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jazlynn Bailey - Professional Webpage for Biology Research and Biotechnology.">
+    <meta name="keywords" content="Biology, Research, Biotechnology, Python, RStudio, Bioinformatics">
+    <title>Jazlynn Bailey - Biologist and Researcher</title>
+    <link rel="stylesheet" type="text/css" href="/Users/jbailey/Desktop/Jazlynn_Website/style.css">
+    <style>
+        body {
+            background-color: #FFD9DA; /* Light pink background */
+            font-weight: bold; /* Bold text throughout */
+            color: #333;
+            font-family: "Times New Roman", Times, serif;
+        }
+        header {
+            background: url('/Users/jbailey/Desktop/Jazlynn_Website/images/Header.jpeg') no-repeat center center; /* Use Header.jpeg as the background */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 60px;
+            position: relative;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            border: 2px solid #5E091A; /* Maroon border around section titles */
+            padding: 10px;
+            background-color: #FFD9DA; /* Light pink background for title box */
+            border-radius: 8px;
+            text-align: center;
+            color: #ffffff; /* White text for section titles */
+            text-shadow: -1px -1px 0 #881C1C, 1px -1px 0 #881C1C, -1px 1px 0 #881C1C, 1px 1px 0 #881C1C; /* Dark maroon outline */
+        }
+        footer {
+            background-color: #5E091A; /* Maroon background */
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            color: #5E091A; /* Maroon text for header */
+            text-shadow: 2px 2px 4px #ffffff; /* White outline */
+            font-weight: 900;
+            font-size: 4em;
+            text-align: center;
+        }
+        p.header-subtitle {
+            color: #5E091A; /* Maroon text for subtitle */
+            text-shadow: 2px 2px 4px #ffffff; /* White outline */
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: none; /* Removed shadow for a clean look */
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+    </style>
+    <script>
+        let slideIndex = 0;
+        function moveSlide(n) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = slides.children.length;
+            slideIndex = (slideIndex + n + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+        }
+    </script>
+</head>
+<body>
+    <!-- Masthead Section -->
+    <header>
+        <img src="/Users/jbailey/Desktop/Jazlynn_Website/images/ProfilePicture_Cropped.png" alt="Jazlynn Bailey Profile Picture" class="profile-image">
+        <h1>Jazlynn Bailey</h1>
+        <p class="header-subtitle">Biologist and Researcher in Biotechnology</p>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        I am a motivated undergraduate student majoring in Biology with a minor in Information Technology. I am passionate about biotechnology and research, eager to contribute to impactful projects.
+        <p><a href="/Users/jbailey/Desktop/Jazlynn_Website/images/Resume.pdf" target="_blank">View my resume</a></p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python Programming</li>
+            <li>RStudio for Data Analysis</li>
+            <li>Bioinformatics (Jalview, ImageJ Fiji)</li>
+            <li>Critical Thinking & Problem Solving</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        I have worked on research projects such as the NEON Giant Viruses study, where I analyzed metagenomic data, and have also worked in field projects to explore freshwater habitats to assess biodiversity among invertebrates.
+        <p>Learn more about my research lab here: <a href="https://jeffreyblanchard.github.io/lab/OurResearch.html" target="_blank">Our Research</a></p>
+    </section>
+
+    <!-- Images Section with Carousel -->
+    <section id="images">
+        <h2>Gallery</h2>
+        <div class="carousel">
+            <div class="slides">
+                <img src="/Users/jbailey/Desktop/Jazlynn_Website/images/slide1.jpg" alt="NEON Project Slide 1">
+                <img src="images/slide2.jpg" alt="NEON Project Slide 2">
+                <img src="images/slide3.jpg" alt="NEON Project Slide 3">
+                <!-- Add more images as needed, up to 20 slides -->
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer>
+        <p>Contact me: <a href="mailto:jazlynnbaile@umass.edu">jazlynnbaile@umass.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/jazlynnbailey" target="_blank">Jazlynn Bailey</a></p>
+    </footer>
+</body>
+</html>
